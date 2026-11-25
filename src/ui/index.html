@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'" />
+  <title>CobbleAsia Installer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="../../assets/logo-winter.png" alt="" class="logo" />
+    <div>
+      <h1>Cobble Asia</h1>
+      <p class="sub">Client pack installer · <span id="pack">checking pack…</span></p>
+    </div>
+  </header>
+
+  <main>
+    <section id="choose">
+      <h2>1. Pick your launcher</h2>
+      <p class="hint">We found these on your computer. <strong>Close them before installing.</strong></p>
+      <ul id="targets"></ul>
+      <p id="none" class="hint" hidden>No launcher found. Install one first (Prism Launcher is the easiest), or choose its folder below.</p>
+      <button id="add" class="link">+ My launcher isn't listed: choose its folder</button>
+
+      <h2>2. Install</h2>
+      <button id="install" class="primary" disabled>Install Cobble Asia</button>
+    </section>
+
+    <section id="working" hidden>
+      <h2>Installing…</h2>
+      <div class="bar"><div id="fill"></div></div>
+      <p id="status" class="hint"></p>
+      <p class="hint">The first install downloads about 500 MB. Keep this window open.</p>
+    </section>
+
+    <section id="done" hidden>
+      <h2>All set</h2>
+      <ul id="results"></ul>
+      <p class="hint">When you join, press <strong>Yes</strong> on the server resource pack. Run this installer again any time to update the mods.</p>
+      <button id="again" class="link">Install into another launcher</button>
+    </section>
+  </main>
+
+  <footer>play.cobbleasia.net</footer>
+  <script src="renderer.js"></script>
+</body>
+</html>
